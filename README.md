@@ -1,62 +1,55 @@
-# zajecia cms zdjecia strony
+# Zajęcia CMS – Zdjęcia Strony
 
-Dokumentacja wizualna oraz zrzuty ekranu (full-page) lokalnego serwisu WordPress uruchomionego w środowisku Docker (MariaDB + WordPress) na systemie macOS.
+Repozytorium zawiera zrzuty ekranu lokalnej witryny WordPress zbudowanej w Dockerze na macOS, dokumentującej zajęcia z przedmiotu CMS.
 
----
+## Motyw
 
-## 📸 Galeria Zrzutów Ekranu
-
-### 1. Strona Główna (Lista wpisów / Lekcje IT)
-*Przegląd wpisów blogowych z wdrożoną paletą barw Malty i nową typografią.*
-![Strona Główna](screenshots/01-strona-glowna.png)
-
----
-
-### 2. Wpis: Czym jest WordPress?
-*Artykuł omawiający architekturę CMS, silnik Core, motywy, wtyczki oraz REST API.*
-![Czym jest WordPress](screenshots/02-wpis-czym-jest-wordpress.png)
+Własny motyw potomny (child theme) **Strona** oparty na Twenty Twenty-Five:
+- Paleta barw inspirowana Maltą (Warm Limestone, Deep Navy, Mediterranean Blue, Golden Sand…)
+- Czcionka: **Plus Jakarta Sans**
+- Blog: lista czystych linków bez miniatur i dat
+- Każda strona zajęć: 3 ilustracje SVG
 
 ---
 
-### 3. Wpis: Czym jest Docker i konteneryzacja?
-*Podstawy wirtualizacji na poziomie kernela, definicje obrazu, kontenera oraz Docker Engine.*
-![Czym jest Docker](screenshots/03-wpis-czym-jest-docker.png)
+## Podstrony
+
+| Plik | Opis | URL (lokalnie) |
+|------|------|----------------|
+| `01-strona-glowna.png` | Strona główna – lista zajęć | `http://localhost/` |
+| `02-zajecia-01.png` | Zajęcia 01 – Środowisko serwerowe i instalacja WordPressa | `http://localhost/2026/10/16/zajecia-01-…/` |
+| `03-zajecia-02.png` | Zajęcia 02 – Motywy, style i projektowanie stron w WordPressie | `http://localhost/2026/10/23/zajecia-02-…/` |
+| `04-podstrona-home.png` | Podstrona HOME – mapa Malty | `http://localhost/home/` |
+| `05-podstrona-food.png` | Podstrona FOOD – Pastizzi | `http://localhost/food/` |
+| `06-podstrona-discover.png` | Podstrona DISCOVER – Gozo | `http://localhost/discover/` |
 
 ---
 
-### 4. Wpis: Środowisko WordPress + MariaDB na macOS
-*Praktyczna konfiguracja pliku docker-compose.yml i uruchomienie bazy MariaDB oraz WordPressa na macOS.*
-![Środowisko WordPress macOS](screenshots/04-wpis-srodowisko-macos.png)
+## Screenshoty
+
+### 01 – Strona główna
+![Strona główna](screenshots/01-strona-glowna.png)
+
+### 02 – Zajęcia 01
+![Zajęcia 01](screenshots/02-zajecia-01.png)
+
+### 03 – Zajęcia 02
+![Zajęcia 02](screenshots/03-zajecia-02.png)
+
+### 04 – HOME
+![HOME](screenshots/04-podstrona-home.png)
+
+### 05 – FOOD
+![FOOD](screenshots/05-podstrona-food.png)
+
+### 06 – DISCOVER
+![DISCOVER](screenshots/06-podstrona-discover.png)
 
 ---
 
-### 5. Podstrona: HOME (Malta)
-*Widok podstrony wprowadzającej z mapą Malty.*
-![HOME](screenshots/05-podstrona-home.png)
+## Stack
 
----
-
-### 6. Podstrona: FOOD (Pastizzi)
-*Kulinaria i tradycyjne maltańskie pastizzi w stylizowanym kontenerze.*
-![FOOD](screenshots/06-podstrona-food.png)
-
----
-
-### 7. Podstrona: DISCOVER (Gozo & Gnejna)
-*Miejsca i atrakcje archipelagu maltańskiego.*
-![DISCOVER](screenshots/07-podstrona-discover.png)
-
----
-
-## 🛠️ Specyfikacja Środowiska Lokalnego
-
-| Komponent | Wersja / Narzędzie | Rola |
-| :--- | :--- | :--- |
-| **Silnik wirtualizacji** | Docker Desktop (macOS) | Konteneryzacja stosu technologicznego |
-| **Baza danych** | MariaDB | Przechowywanie danych WordPressa |
-| **CMS** | WordPress 6.7+ | Serwer aplikacji i generator treści |
-| **Motyw** | `strona` (child theme Twenty Twenty-Five) | Szablon blokowy FSE z dedykowaną paletą Malty |
-| **Adres lokalny** | `http://localhost` | Port 80 (mapowany z kontenera) |
-
----
-*Repozytorium utworzone automatycznie: zajecia cms zdjecia strony.*
+- **CMS**: WordPress (latest) w kontenerze Docker
+- **Baza danych**: MariaDB (latest)
+- **System**: macOS / Docker Desktop
+- **Screenshoty**: Playwright (Chromium, 1440 × 900 @2×, fullPage)
