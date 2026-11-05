@@ -1,27 +1,5 @@
 # zzcms – Content Management Studio
 
-Projekt semestralny zrealizowany w ramach zajęć CMS. Jest to autorski system typu "cyfrowy ogród", łączący w jednym ekosystemie bazę wiedzy (notatki z zajęć), dokumentację projektową oraz w pełni funkcjonalny moduł e-commerce.
-
-## 🛠 Technologie
-*   **System:** WordPress
-*   **E-commerce:** WooCommerce
-*   **Motyw:** Autorski motyw (Vanilla JS, CSS3, wsparcie dla FSE / `theme.json`)
-*   **Środowisko:** Docker & Docker Compose (localhost)
-
-## 🚀 Uruchomienie (Localhost)
-
-1. Sklonuj/pobierz repozytorium projektu.
-2. W folderze z projektem uruchom środowisko w terminalu:
-   ```bash
-   docker-compose up -d
-   ```
-3. Projekt będzie dostępny w przeglądarce pod adresem: `http://localhost:8081`
-
----
-
-## 📸 Przegląd interfejsu (Zrzuty ekranu)
-
-Poniżej znajduje się udokumentowany postęp prac podzielony na główne sekcje aplikacji.
 
 ### 1. Architektura i Baza wiedzy (Strona główna)
 Podsumowanie semestru i główne repozytorium plików.
